@@ -9,6 +9,6 @@ https://www2.cs.arizona.edu/classes/cs453/fall14/DOCS/cminusminusspec.html
 
 「プログラミング言語論」大山田通夫　五味　弘　共著　コロナ社 
 
-「低レイヤーを知りたい人向けのコンパイラ入門」　Ueyama　Rui 
-
-https://www.sigbus.info/compilerbook# 
+#再帰的なコンパイル方式
+BN記法で示される文法のままコンパイルする。
+セルフコンパイルの実現のため、再帰が書きやすい関数型言語を避ける
