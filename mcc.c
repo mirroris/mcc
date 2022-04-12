@@ -82,13 +82,15 @@ SymTab* valOfSymbol(char *name){
     }
 }
 
-
+/* while の中の条件をいじる必要あり
 void expect_expr(char *mark){
-    while(){
-
+    char c=' ';
+    while(c*){
+        c = increment(mark);
         mark++;
     }
 }
+*/
 
 /* ignore white */
 void increment(char *mark){
