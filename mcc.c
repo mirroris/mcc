@@ -10,6 +10,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* to indicate which charactor mcc is reading */
+char *mark;
+
 //function to report an error
 //get the same arguments as printf
 void error(char *fmt, ...){
@@ -79,13 +82,27 @@ SymTab* valOfSymbol(char *name){
     }
 }
 
+/* while の中の条件をいじる必要あり
+void expect_expr(char *mark){
+    char c=' ';
+    while(c*){
+        c = increment(mark);
+        mark++;
+    }
+}
+*/
 
+/* ignore white */
+void increment(char *mark){
+    while(mark == ' ' || mark == '\n' || mark == '\t')mark++;
+    return mark;
+}
 
-
-
+/*
 SymTab* pushSymbol(){
 
 }
+*/
 
 //current token
 Token *token;
@@ -116,6 +133,7 @@ int expect_number() {
 bool at_eof() {
     return token->kind == TK_EOF;
 }
+ 
 
 // creating a new token and connecting cur
 Token *new_token(TokenKind kind, Token *cur, char *str) {
