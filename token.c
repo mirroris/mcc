@@ -7,7 +7,11 @@ enum {
     ID = 257,
     TRU = 258,
     FAL =  259,
-    FLOAT = 260
+    FLOAT = 260,
+    FOR = 261,
+    WHILE = 262,
+    IF = 263,
+    DEF = 264
 };
 
 struct Token{
