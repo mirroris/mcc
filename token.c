@@ -22,6 +22,24 @@ struct Token{
     Token *next;
 };
 
+
+void tokenize(char *buf){
+    char *peek=buf;
+    int line=0;
+    
+    /* skip until not whitespace and count the number of lines*/
+    for(;;peek++){
+        if((*peek=='\t') || (*peek==' ')) ;
+        else if(*peek=='\n') line++;
+        else break;
+    }
+
+    /* tokenization here */
+
+
+
+}
+
 int main(){
     return 0;
 }
