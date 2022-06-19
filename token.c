@@ -1,4 +1,4 @@
-
+#include<string.h>
 typedef struct Token Token;
 
 /* this enum is defined for Token identification*/
@@ -36,8 +36,16 @@ void tokenize(char *buf){
 
     /* tokenization here */
 
+    /* number to integer*/
+    if((*peek>=30) && (*peek<=39)){ //if *peek have number
+        int v =0;
+        do{
+            v=10*v+atoi(*peek);
+            peek++;
+        } while((*peek>=30) && (*peek<=39))
+    }
 
-
+    return;
 }
 
 int main(){
